@@ -37,7 +37,7 @@ curl https://rppico-default-rtdb.asia-southeast1.firebasedatabase.app/msg.json -
 ```bash
 wget --header Accept:text/event-stream -qO- https://rppico-default-rtdb.asia-southeast1.firebasedatabase.app/msg.json \
   | grep '^data: {' --line-buffered \
-  | while read output; do notify-send "${output:26:-2}"; done
+  | while read line; do notify-send "${line:26:-2}"; done
 ```
 
 ## Publish
