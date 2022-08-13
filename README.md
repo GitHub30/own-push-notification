@@ -48,13 +48,13 @@ wget --header Accept:text/event-stream -qO- https://rppico-default-rtdb.asia-sou
 Invoke-WebRequest -Method PUT -Body ([System.Text.Encoding]::UTF8.GetBytes("`"🕊$(date -Format yyyy-MM-ddTHH:mm:ss.fff)`"")) https://rppico-default-rtdb.asia-southeast1.firebasedatabase.app/msg.json
 ```
 
-### curl
+### Mac
 
 ```bash
 curl -X PUT -d '"🐥'$(date --iso-8601=ns)'"' https://rppico-default-rtdb.asia-southeast1.firebasedatabase.app/msg.json
 ```
 
-### wget
+### Linux
 
 ```bash
 wget --method PUT --body-data '"🐧'$(date --iso-8601=ns)'"' -qO- https://rppico-default-rtdb.asia-southeast1.firebasedatabase.app/msg.json
