@@ -24,15 +24,15 @@ $StreamReader.Close() > $null
 $ResponseStream.Close() > $null
 ```
 
-### curl
+### Mac
 
 ```bash
 curl https://rppico-default-rtdb.asia-southeast1.firebasedatabase.app/msg.json -H Accept:text/event-stream --no-buffer \
   | grep '^data: {' --line-buffered \
-  | while read line; do notify-send "${line:26:-2}"; done
+  | while read line; do osascript -e 'display notification "'"${line:26:-2}"'"'; done
 ```
 
-### wget
+### Linux
 
 ```bash
 wget --header Accept:text/event-stream -qO- https://rppico-default-rtdb.asia-southeast1.firebasedatabase.app/msg.json \
