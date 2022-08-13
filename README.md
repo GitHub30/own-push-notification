@@ -62,7 +62,7 @@ wget --method PUT --body-data '"🐧'$(date --iso-8601=ns)'"' -qO- https://rppic
 
 ## Endpoint
 
-Open Firebase console and copy url
+Open Firebase console and copy it
 
 ![Screenshot from 2022-08-14 02-15-45](https://user-images.githubusercontent.com/12811398/184504259-5bf12e7a-c2c4-438c-af09-52632830ff15.jpg)
 
